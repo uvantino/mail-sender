@@ -64,7 +64,7 @@ app.post("/send-email", async (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: recipientEmail,
-    subject: "Application for Software Developer Role",
+    subject: "Application for SDE - Front End Role",
     text: `Dear HR,
 
 I hope this email finds you well.
