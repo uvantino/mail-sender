@@ -22,7 +22,7 @@
 //       attachments: [
 //         {
 //           filename: "resume.pdf",
-//           path: "./resume.pdf", 
+//           path: "./resume.pdf",
 //         },
 //       ],
 //     };
@@ -54,7 +54,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-
 app.post("/send-email", async (req, res) => {
   const { recipientEmail } = req.body;
 
@@ -65,12 +64,25 @@ app.post("/send-email", async (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: recipientEmail,
-    subject: "Your Resume Submission",
-    text: "Hello, \n\nPlease find my resume attached.\n\nBest Regards,\nYour Name",
+    subject: "Application for Software Developer Role",
+    text: `Dear HR,
+
+I hope this email finds you well.
+
+My name is Yuvraj Singh Chouhan, and I have one year of hands-on experience as a Frontend Developer, specializing in React and Angular. Throughout my career, I have developed multiple production-level applications, focusing on building scalable, efficient, and user-friendly interfaces.
+
+I have also attached my resume for your consideration.
+
+I look forward to the opportunity to connect and discuss how my skills align with your organization’s goals.
+
+Best regards,  
+Yuvraj Singh Chouhan  
+Phone: +91 7747023697`,
     attachments: [
       {
         filename: "resume.pdf",
         path: "./resume.pdf", // Ensure the file exists
+        contentType: "application/pdf",
       },
     ],
   };
@@ -85,7 +97,7 @@ app.post("/send-email", async (req, res) => {
 });
 
 // Start Server
-const PORT =  5000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
