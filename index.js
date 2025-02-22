@@ -64,33 +64,33 @@ app.post("/send-email", async (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: recipientEmail,
-    // subject: "Application for SDE - Front End Role",
-    subject: "Request for Referral – JNU Student Seeking Opportunity at Optum",
-//     text: `Dear HR,
+    subject: "Application for SDE - Front End Role",
+    // subject: "Request for Referral – JNU Student Seeking Opportunity at Optum",
+    text: `Dear HR,
 
-// I hope this email finds you well.
+I hope this email finds you well.
 
-// My name is Yuvraj Singh Chouhan, and I have one year of hands-on experience as a Frontend Developer, specializing in React and Angular. Throughout my career, I have developed multiple production-level applications, focusing on building scalable, efficient, and user-friendly interfaces.
+My name is Yuvraj Singh Chouhan, and I have one year of hands-on experience as a Frontend Developer, specializing in React and Angular. Throughout my career, I have developed multiple production-level applications, focusing on building scalable, efficient, and user-friendly interfaces.
 
-// I have also attached my resume for your consideration.
+I have also attached my resume for your consideration.
 
-// I look forward to the opportunity to connect and discuss how my skills align with your organization’s goals.
+I look forward to the opportunity to connect and discuss how my skills align with your organization’s goals.
 
-// Best regards,  
-// Yuvraj Singh Chouhan  
-// Phone: +91 7747023697`,
-    text: `Dear Sir/Madam.
+Best regards,  
+Yuvraj Singh Chouhan  
+Phone: +91 7747023697`,
+    //     text: `Dear Sir/Madam.
 
-I hope you're doing well. I am Yuvraj Singh Chouhan, a fellow JNU student, and I recently came across an opening at Optum that aligns with my skill set. Since you are already a part of Optum, I wanted to reach out to see if you could kindly refer me for the role.
+    // I hope you're doing well. I am Yuvraj Singh Chouhan, a fellow JNU student, and I recently came across an opening at Optum that aligns with my skill set. Since you are already a part of Optum, I wanted to reach out to see if you could kindly refer me for the role.
 
-Here is the referral link for the position:
-https://careers.unitedhealthgroup.com/job/21590686/associate-software-engineer-angular-or-react-java-full-stack-hyderabad-in/
+    // Here is the referral link for the position:
+    // https://careers.unitedhealthgroup.com/job/21590686/associate-software-engineer-angular-or-react-java-full-stack-hyderabad-in/
 
-It would be a great help in my job search, and I would truly appreciate any guidance or support you can provide. Looking forward to your response.
+    // It would be a great help in my job search, and I would truly appreciate any guidance or support you can provide. Looking forward to your response.
 
-Best regards,
-Yuvraj Singh Chouhan
-7747023697`,
+    // Best regards,
+    // Yuvraj Singh Chouhan
+    // 7747023697`,
     attachments: [
       {
         filename: "resume.pdf",
